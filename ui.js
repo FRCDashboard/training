@@ -1,7 +1,6 @@
 // This object contains a list of all the controls on the dashboard. If you add a new interactive element, you'll need to put it in this object.
 var ui = {
-	light: document.getElementById('light'),
-    winch: document.getElementById('winch')
+	light: document.getElementById('light')
 };
 
 // Sets function to be called on NetworkTables connect. Commented out because it's usually not necessary.
@@ -13,11 +12,11 @@ var ui = {
 // Sets function to be called when any NetworkTables key/value changes
 NetworkTables.addGlobalListener(onValueChanged, true);
 
-/*
-    @param key: The name of the variable.
-    @param value: The value of the variable.
-    @param isNew: Boolean, true if the value has not yet been passed to this instance of FRC Dashboard.
-*/
+/**
+ *  @param key {string} The name of the variable.
+ *  @param value {*} The value of the variable.
+ *  @param isNew {boolean} Has the value not yet been passed to this instance of the Dashboard?
+ */
 function onValueChanged(key, value, isNew) {
 	// Sometimes, NetworkTables will pass booleans as strings. This corrects for that. You probably shouldn't have to touch this code.
 	if (value == 'true') {
