@@ -10,7 +10,8 @@ Note: This software also uses a web server which is written in Python. You proba
 
 ## Dependencies:
 * Python 3
-* pynetworktables2js:
+* pynetworktables2js
+
 
     pip3 install pynetworktables2js
 

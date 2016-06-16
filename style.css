@@ -1,1 +1,5 @@
-/* There wil normally be a lot here, but to keep this example simple we left out the CSS. */
+/* There wil normally be a lot here, but to keep this example simple we left out any unnecessary CSS. */
+
+button {
+    display: block;
+}

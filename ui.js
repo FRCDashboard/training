@@ -1,6 +1,8 @@
 // This object contains a list of all the controls on the dashboard. If you add a new interactive element, you'll need to put it in this object.
 var ui = {
-	light: document.getElementById('light')
+	light: document.getElementById('light'),
+
+    winchMonitor: document.getElementById('winchMonitor')
 };
 
 // Sets function to be called on NetworkTables connect. Commented out because it's usually not necessary.
@@ -31,6 +33,20 @@ function onValueChanged(key, value, isNew) {
 		case '/SmartDashboard/light':
 			// Set the checkedness of this control element.
 			ui.light.checked = value;
+            break;
+        case '/SmartDashboard/winch':
+            // If you haven't seen the thing at the end of this line, it's basically just a compact switch statement with a boolean.
+            ui.winchMonitor.innerHTML = value ? 'Winch open' : 'Winch closed';
+            // If you made it a real if statement, it would look something like this:
+            /*
+            if (value) {
+                ui.winchMonitor.innerHTML = 'Winch open';
+            } else {
+                ui.winchMonitor.innerHTML = 'Winch closed';
+            }
+            */
+            // As you can see, it's better if you do it this short way. For more help, see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+            break;
 	}
 	// In the real dashboard, there will be more code here to manage the Tuning section of the UI.
 	// That code is not included in this example because it's very confusing and you usually don't need to modify it anyway.
