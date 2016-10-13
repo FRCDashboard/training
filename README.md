@@ -1,5 +1,5 @@
 # FRC Dashboard Training
-This repository serves as a training exercise for students and mentors wishing to learn to use the [FRC Dashboard](https://github.com/FRCDashboard/FRCDashboard) FRC user interface development library.
+This repository serves as a training exercise for students and mentors wishing to learn to use the [FRC Dashboard](https://github.com/FRCDashboard/FRCDashboard) user interface development library.
 
 ## Prerequisites for this trainer
 FRC Dashboard uses JavaScript, HTML, and CSS code. It is HIGHLY recommended that you gain at least some knowledge of all three of these languages before attempting this training or building on to FRC Dashboard. [Codecademy](https://codecademy.com)'s courses ["JavaScript"](https://www.codecademy.com/learn/javascript) and ["HTML & CSS"](https://www.codecademy.com/learn/web) are a quick and easy way to get up and running.
@@ -14,13 +14,18 @@ To start the server, you'll also need very basic knowledge of using the Terminal
     * If you don't have administrator privileges, you can put `--user` at the end of the installation command.
 
 ## Starting the server
-Use the `cd` command in Terminal (Linux/Mac) or cmd (Windows) to navigate to this directory. Then execute:
+Use the `cd` command to navigate to this directory.
+If on Mac/Linux, execute:
 
-    python3 server.py
+    python3 -m pynetworktables2js
+
+If on Windows, execute:
+
+    start py -3 -m pynetworktables2js
 
 This will start the server, hosting your code at http://localhost:8888. Open that page to view your dashboard or to use it in competition.
 
-**Note:** The actual dashboard is usually opened in a slightly different way, using something called Electron. You don't have to worry about that yet.
+**Note:** The actual dashboard is usually opened in a slightly different way, using a JavaScript tool called Electron. You don't have to worry about that yet.
 
 ## Tasks
 1. Take a look at the checkbox with the ID `#light`. This checkbox should work perfectly.

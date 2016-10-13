@@ -1,7 +1,6 @@
 // This object contains a list of all the controls on the dashboard. If you add a new interactive element, you'll need to put it in this object.
 var ui = {
 	light: document.getElementById('light'),
-
     winchMonitor: document.getElementById('winchMonitor')
 };
 
